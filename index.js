@@ -151,7 +151,7 @@ function copy(array, arrayCopy){
 
 }
 
-copy("originalFlavors", "copyFlavors");
+console.log(copy(originalFlavors), copy(copyFlavors));
 console.log(copyFlavors);
 
 
