@@ -143,7 +143,7 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(array, arrayCopy){
+function copy(array){
     
     copyFlavors = [...array];
 
@@ -170,11 +170,30 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(){
+let newFlavorArray = [];
 
-    /*code here*/
+function filterByWord(arrayParam, stringParam){
+
+
+    for (let i = 0; i < arrayParam.length; i++) {
+        
+        // if (arrayParam[i] === stringParam){ --- wrong
+        if (arrayParam[i].includes(stringParam)){
+            
+            newFlavorArray.push(arrayParam[i])
+        
+            
+            // newFlavorArray.push(array[i]);
+        } 
+        
+    
+    }
+
+   return newFlavorArray;
 
 }
+
+console.log(filterByWord(originalFlavors, "Nut"));
 
 
 
