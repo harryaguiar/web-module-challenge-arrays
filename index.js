@@ -61,12 +61,12 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(array, RainbowSherbert){
-    let firstFlavor = array.unshift('Rainbow Sherbert')
+function addFlavor(array, flavor){
+    let firstFlavor = array.unshift(flavor)
 
     return array;
 }
-console.log(addFlavor(originalFlavors));
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 // addFlavor("Rainbow Sherbert", originalFlavors)
 
@@ -122,11 +122,11 @@ Hint: You can use .splice() for this
 
 */
 
-// console.log(originalFlavors[24]);
+console.log(originalFlavors[2]);
 
-function removeFlavorByName(array, PeppermintFudgeRibbon){
+function removeFlavorByName(array){
 
-    let flavor = array.splice(24, 1);
+    let flavor = array.splice(2, 1);
 
     return array;
 
@@ -209,11 +209,17 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
-
-    /*code here*/
-
+function getAverageWordLength(array) {
+  
+  for (let i = 0; i < array.length; i++) {
+      let str = array[i].length / array.length;
+    
+      return str;
+    }
+    
 }
+
+console.log(getAverageWordLength(originalFlavors));
 
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
